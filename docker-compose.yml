@@ -15,7 +15,7 @@ services:
     command: ['--logpath', '/var/log/mongodb/mongod.log']
 
   translate:
-    container_name: whisper-libretranslate
+    container_name: sct-court-transcriber-libretranslate
     image: libretranslate/libretranslate:latest
     restart: unless-stopped
     volumes:
@@ -39,21 +39,21 @@ services:
       timeout: 3s
       retries: 5
 
-  whishper:
+  sct-court-transcriber:
     #pull_policy: always
     #image: pluja/whishper:${WHISHPER_VERSION:-latest}
-    image: sct-court-transcriber:latest
+    image: gjvanettensct/sct-court-transcriber:latest
     env_file:
       - .env
     volumes:
       - ./whishper_data/uploads:/app/uploads
       - ./whishper_data/logs:/var/log/whishper
-    container_name: whishper
+    container_name: sct-court-transcriber
     restart: unless-stopped
     networks:
       default:
         aliases:
-          - whishper
+          - sct-court-transcriber
     ports:
       - 8082:80
     depends_on:
