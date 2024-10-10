@@ -91,11 +91,11 @@
 <header>
 	<h1 class="flex items-center justify-center mt-8 space-x-4 text-4xl font-bold">
 		<span>
-			<img class="w-20 h-20" src="/logo.svg" alt="Logo: a cloud whispering" />
+			<img class="w-20 h-20" src="/state-citizen-trust-logo.png" alt="Logo: State Citizen Trust Logo" />
 		</span>
-		<span> Whishper </span>
+		<span> State Citizen Trust Court Transcriber </span>
 	</h1>
-	<h2 class="font-mono text-center text-md opacity-70">{data.randomSentence}</h2>
+	<h2 class="font-mono text-center text-md opacity-70">Know Your Constitutional Rights!!</h2>
 </header>
 
 <main class="w-4/6 mx-auto mt-4 mb-8 card bg-neutral text-neutral-content">
