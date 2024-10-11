@@ -2,7 +2,7 @@ services:
   mongo:
     image: mongo
     env_file:
-      - .env
+      - prop-desktop.env
     restart: unless-stopped
     volumes:
       - ./whishper_data/db_data:/data/db
@@ -22,7 +22,7 @@ services:
       - ./whishper_data/libretranslate/data:/home/libretranslate/.local/share
       - ./whishper_data/libretranslate/cache:/home/libretranslate/.local/cache
     env_file:
-      - .env
+      - prop-desktop.env
     tty: true
     environment:
       LT_DISABLE_WEB_UI: True
@@ -44,7 +44,7 @@ services:
     #image: pluja/whishper:${WHISHPER_VERSION:-latest}
     image: gjvanettensct/sct-court-transcriber:latest
     env_file:
-      - .env
+      - prop-desktop.env
     volumes:
       - ./whishper_data/uploads:/app/uploads
       - ./whishper_data/logs:/var/log/whishper
